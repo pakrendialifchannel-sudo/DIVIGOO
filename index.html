@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIVIGO — Digital Division Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div>
+    <div class="brand">DIVIGO</div>
+    <div class="brand-sub">Digital Division Learning</div>
+  </div>
+
+  <div class="progress-area">
+    <span id="progressText">Misi 0/7</span>
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="homeScreen" class="screen active">
+    <div class="hero">
+      <div class="machine">🧮</div>
+
+      <p class="eyebrow">KETAPDI • Kelas Tempo Dulu Digital</p>
+
+      <h1>Belajar Pembagian<br>Jadi Lebih Seru!</h1>
+
+      <p class="hero-text">
+        Temukan, tunjukkan, buktikan, dan jelaskan cara berpikirmu.
+      </p>
+
+      <button class="primary-btn" onclick="startLearning()">
+        🚀 Mulai DIVIGO
+      </button>
+
+      <div class="signature">
+        <strong>JAWAB → BUKTIKAN → JELASKAN</strong>
+        <span>“Bagaimana kamu tahu?”</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section id="missionScreen" class="screen">
+
+    <div class="mission-head">
+      <span id="missionNumber">MISI 1</span>
+      <h2 id="missionTitle"></h2>
+      <p id="missionInstruction"></p>
+    </div>
+
+    <div id="missionContent" class="mission-content"></div>
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <div class="navigation">
+      <button class="secondary-btn" onclick="goHome()">← Beranda</button>
+      <button id="nextBtn" class="primary-btn hidden" onclick="nextMission()">
+        Lanjut →
+      </button>
+    </div>
+
+  </section>
+
+  <!-- RESULT -->
+  <section id="resultScreen" class="screen">
+
+    <div class="result-card">
+
+      <div class="result-icon">🏆</div>
+
+      <h1>Hebat!</h1>
+
+      <p>Kamu telah menyelesaikan perjalanan DIVIGO.</p>
+
+      <div class="score-box">
+        <span>Skor kamu</span>
+        <strong id="finalScore">0</strong>
+      </div>
+
+      <h3>💭 Refleksi</h3>
+
+      <p>
+        Bagian mana yang paling membantu kamu memahami pembagian?
+      </p>
+
+      <div class="reflection-options">
+        <label>
+          <input type="radio" name="reflection" value="benda">
+          Menggunakan benda
+        </label>
+
+        <label>
+          <input type="radio" name="reflection" value="papan">
+          Papan digital
+        </label>
+
+        <label>
+          <input type="radio" name="reflection" value="strategi">
+          Memilih strategi
+        </label>
+
+        <label>
+          <input type="radio" name="reflection" value="bukti">
+          Membuktikan jawaban
+        </label>
+      </div>
+
+      <textarea
+        id="reflectionText"
+        placeholder="Tuliskan pengalaman belajarmu..."
+      ></textarea>
+
+      <button class="primary-btn" onclick="saveReflection()">
+        💾 Simpan Refleksi
+      </button>
+
+      <button class="secondary-btn full-btn" onclick="restartLearning()">
+        🔄 Mulai Lagi
+      </button>
+
+      <p id="saveMessage" class="save-message"></p>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <strong>DIVIGO</strong> • Digital Division Learning
+  <br>
+  <span>KETAPDI — Dari Kapur ke Digital, dari Menghafal ke Memahami.</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
